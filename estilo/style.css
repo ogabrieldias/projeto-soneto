@@ -88,9 +88,18 @@ section#img01 {
 }
 
 section#img02 {
-    background-image: url('../imagens/background002.jpg');
-    
+    background-image: url('../imagens/background002.jpg');   
 }
+
+section#img03 {
+    background-image: url('../imagens/background003.jpg');   
+}
+
+section#img04 {
+    background-image: url('../imagens/background004.avif');   
+    background-position: right center;
+}
+
 
 footer {
     background-color: black;
