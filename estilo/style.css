@@ -82,6 +82,16 @@ section.imagem > p {
     text-shadow: 1px 1px 0px black;
 }
 
+#finalizando {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 5rem;
+    background-color: rgba(0, 0, 0, 0.548);
+    text-shadow: 1px 1px 0px black;
+    color: #daa520;
+}
+
+
 section#img01 {
     background-image: url('../imagens/background001.jpg');
     background-position: right center;
