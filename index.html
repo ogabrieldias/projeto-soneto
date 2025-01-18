@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I love you</title>
     <link rel="stylesheet" href="estilo/style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    
     <header>
         <h1>Use os meus beijos</h1> 
         <p>Por <a href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank">Flá Perez</a></p>
+        <form id="nameForm">
+            <label for="fullName">Qual é seu nome completo?</label><br>
+            <input type="text" id="fullName" placeholder="Digite seu nome completo" required>
+            <button type="submit">Enviar</button>
+          </form>
     </header>
  
     <section class="imagem" id="img04">
@@ -71,9 +78,31 @@
         </p>
     </section> -->
 
-    <footer>
+    <footer id="footerMessage">
+        Bem-vindo ao site!
         <p>Site criado 14/12/2024 por <a href="https://github.com/ogabrieldias" target="_blank">Gabriel Bernardino Dias </a> <br>Três Rios | RJ </p>
         
     </footer>
+    <script>
+        const form = document.getElementById('nameForm');
+        const footerMessage = document.getElementById('footerMessage');
+        const submitButton = form.querySelector('button');
+
+        form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Impede o envio do formulário padrão
+        const fullName = document.getElementById('fullName').value.trim();
+        const defaultMessage = `
+            <p>Site criado 14/12/2024 por <a href="https://github.com/ogabrieldias" target="_blank">Gabriel Bernardino Dias</a> <br>Três Rios | RJ</p>
+        `;
+
+        if (fullName) {
+            footerMessage.innerHTML = `Eu te amo, ${fullName}! ${defaultMessage}`;
+            submitButton.disabled = true; // Desabilita o botão após o envio
+        } else {
+            footerMessage.innerHTML = `Por favor, insira seu nome. ${defaultMessage}`;
+        }
+        });
+
+    </script>
 </body>
 </html> 
